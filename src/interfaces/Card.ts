@@ -1,6 +1,6 @@
 export interface Card {
     _id?: string;
-    userId: string;
+    userId?: string;
     name: string;
     address: string;
     description: string;
