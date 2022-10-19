@@ -39,7 +39,7 @@ const SignUp: FunctionComponent<SignUpProps> = () => {
     <>
       <Navbar isLogged={false} isAdmin={false} />
       <form className="mx-auto w-25" onSubmit={formik.handleSubmit}>
-        <h1 className="display-5 text-center my-3">REGISTER</h1>
+        <h1 className="display-5 text-center my-3">Sign Up</h1>
         <div className="mb-3 form-floating">
           <input
             type="text"

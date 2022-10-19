@@ -42,39 +42,55 @@ const Navbar: FunctionComponent<NavbarProps> = ({ isLogged, isAdmin }) => {
                       About
                     </NavLink>
                   </li>
+                  <li className="nav-item">
+                    {isAdmin ? (
+                      <NavLink
+                        className="nav-link"
+                        aria-current="page"
+                        to="/newcard"
+                      >
+                        New Card
+                      </NavLink>
+                    ) : null}
+                  </li>
+                  <li className="nav-item">
+                    <NavLink
+                      className="nav-link"
+                      aria-current="page"
+                      to="/myCards"
+                    >
+                      My Cards
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink
+                      className="nav-link"
+                      aria-current="page"
+                      to="/allcards"
+                    >
+                      All Cards
+                    </NavLink>
+                  </li>
                 </>
-              ) : null}
-
-              <li className="nav-item">
-                {isAdmin ? (
-                  <NavLink
-                    className="nav-link"
-                    aria-current="page"
-                    to="/newcard"
-                  >
-                    New Card
+              ) : (
+                <>
+                <li className="nav-item">
+                  <NavLink className="nav-link" aria-current="page" to="/SignIn">
+                    Sign In
                   </NavLink>
-                ) : null}
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="/myCards">
-                  My Cards
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  aria-current="page"
-                  to="/allcards"
-                >
-                  All Cards
-                </NavLink>
-              </li>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" aria-current="page" to="/SignUp">
+                    Sign Up
+                  </NavLink>
+                </li>
+                </>
+              )}
             </ul>
           </div>
           {isLogged ? (
-            <button className="btn btn-warning" onClick={handleLogout}>
-              LOGOUT
+            <button className="btn btn-outline-warning" onClick={handleLogout}>
+              Sign Out
             </button>
           ) : null}
         </div>

@@ -38,7 +38,7 @@ const SignIn: FunctionComponent<SignInProps> = () => {
       <>
         <Navbar isLogged={false} isAdmin={false} />
         <form className="mx-auto w-25" onSubmit={formik.handleSubmit}>
-          <h1 className="display-5 text-center my-3">LOGIN</h1>
+          <h1 className="display-5 text-center my-3">Sign In</h1>
           <div className="mb-3 form-floating">
             <input
               type="email"
