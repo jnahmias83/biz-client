@@ -58,7 +58,7 @@ const EditCard: FunctionComponent<EditCardProps> = () => {
   return (
     <>
      <Navbar isLogged={getIsLogged()} isAdmin={getIsAdmin()} />
-      <form className="mx-auto w-25" onSubmit={formik.handleSubmit}>
+      <form className="mx-auto w-25 py-4" onSubmit={formik.handleSubmit}>
         <h3 className="display-5 text-center">EDIT CARD</h3>
         <div className="mb-3 form-floating">
           <input
