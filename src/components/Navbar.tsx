@@ -16,6 +16,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({ isLogged, isAdmin }) => {
 
   return (
     <>
+     {isLogged?1:0}
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
         <div className="container-fluid">
           <img src="../biz-logo.png" width="50" />

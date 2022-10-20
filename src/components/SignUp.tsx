@@ -25,6 +25,7 @@ const SignUp: FunctionComponent<SignUpProps> = () => {
     onSubmit: (values: User) => {
       addUser(values)
         .then((result) => {
+          sessionStorage.setItem("Islogged", "true");
           sessionStorage.setItem("token", result.data.token);
           successMsg("You registered successfully");
           navigate("/home");
