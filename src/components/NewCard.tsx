@@ -44,7 +44,7 @@ const NewCard: FunctionComponent<NewCardProps> = () => {
       <Navbar isLogged={getIsLogged()} isAdmin={getIsAdmin()} />
 
       <form className="mx-auto w-25 my-3" onSubmit={formik.handleSubmit}>
-        <h1 className="display-5 text-center my-3">ADD A NEW CARD</h1>
+        <h1 className="display-5 text-center my-3" style={{color:"black"}}>ADD A NEW CARD</h1>
         <div className="mb-3 form-floating">
           <input
             type="text"

@@ -10,6 +10,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({ isLogged, isAdmin }) => {
   const navigate = useNavigate();
   const handleLogout = () => {
     sessionStorage.removeItem("token");
+    sessionStorage.setItem("Islogged", "false");
     navigate("/");
   };
 

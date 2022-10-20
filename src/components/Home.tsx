@@ -18,7 +18,7 @@ const Home: FunctionComponent<HomeProps> = () => {
           height: "35rem"
         }}
       >
-        <p className="p-5">
+        <p className="p-5 p_home">
           <strong>Business cards</strong> are cards bearing business information about a company
           or individual.They are shared during formal introductions as a
           convenience and a memory aid. A business card typically includes the

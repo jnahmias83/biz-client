@@ -22,7 +22,7 @@ const About: FunctionComponent<AboutProps> = () => {
   return (
     <>
       <Navbar isLogged={getIsLogged()} isAdmin={getIsAdmin()} />
-      <h1 className="display-5 text-center my-3">YOUR PROFILE</h1>
+      <h1 className="display-5 text-center my-3" style={{color:"black"}}>YOUR PROFILE</h1>
       <div className="container">
         <div className="row">
           <div className="col-4"></div>

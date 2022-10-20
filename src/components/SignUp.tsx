@@ -124,7 +124,7 @@ const SignUp: FunctionComponent<SignUpProps> = () => {
             </button>
             <p className="tect-center mt-3">
               <Link to="/SignIn">
-                <strong style={{color:"white",fontSize:"20px",textDecoration:"underline"}}>Already have user?Sign In here</strong>
+                <strong style={{color:"white",fontSize:"20px",textDecoration:"underline"}}>Already have user? Sign In here</strong>
               </Link>
             </p>
           </div>

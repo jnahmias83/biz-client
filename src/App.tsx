@@ -10,6 +10,7 @@ import EditCard from './components/EditCard';
 import Footer from './components/Footer';
 import PageNotFound from './components/PageNotFound';
 import Home from './components/Home';
+import { getIsLogged } from "./services/usersService";
 
 function App() {
   const myName: string = "Yonathan Nahmias";

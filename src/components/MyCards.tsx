@@ -31,9 +31,9 @@ const MyCards: FunctionComponent<MyCardsProps> = () => {
   return (
     <>
       <Navbar isLogged={getIsLogged()} isAdmin={getIsAdmin()} />
-      <h1 className="display-5 text-center my-3">My Cards</h1>
+      <h1 className="display-5 text-center my-3" style={{color:"black"}}>My Cards</h1>
       <div className="row gap-4 m-4">
-        {myCards.length ? (
+        {(myCards.length != 0) ? (
           myCards.map((card: Card) => (
             <div
               key={card._id}
@@ -45,8 +45,8 @@ const MyCards: FunctionComponent<MyCardsProps> = () => {
                 <h6 className="text-secondary">{card.name}</h6>
                 <small className="card-title">{card.description}</small>
                 <br/><br/>
-                <p className="card-text">Address: {card.address}</p>
-                <p className="card-text">Phone: {card.phone}</p>
+                <p className="card-text"><strong>Address: </strong>{card.address}</p>
+                <p className="card-text"><strong>Phone:</strong> {card.phone}</p>
 
                 {getIsAdmin() ? (
                   <>
