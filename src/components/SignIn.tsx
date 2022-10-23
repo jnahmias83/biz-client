@@ -46,7 +46,7 @@ const SignIn: FunctionComponent<SignInProps> = () => {
           height: "35rem",
         }}
       >
-        <form className="mx-auto w-25 py-2" onSubmit={formik.handleSubmit}>
+        <form className="mx-auto w-input py-2" onSubmit={formik.handleSubmit}>
           <h1 className="display-5 text-center my-3">Sign In</h1>
           <div className="mb-3 form-floating">
             <input
