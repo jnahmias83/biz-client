@@ -118,10 +118,10 @@ const SignUp: FunctionComponent<SignUpProps> = () => {
           <div>
             <button
               type="submit"
-              className="btn btn-secondary w-100 my-2"
+              className="btn btn-primary w-100 my-2"
               disabled={!(formik.isValid && formik.dirty)}
             >
-              Submit
+              <strong>Submit</strong>
             </button>
             <p className="tect-center mt-3">
               <Link to="/SignIn">

@@ -127,10 +127,10 @@ const NewCard: FunctionComponent<NewCardProps> = () => {
         <div>
           <button
             type="submit"
-            className="btn btn-secondary w-100"
+            className="btn btn-primary w-100"
             disabled={!(formik.isValid && formik.dirty)}
           >
-            Submit
+            <strong>Submit</strong>
           </button>
         </div>
       </form>
