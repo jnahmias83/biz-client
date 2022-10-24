@@ -63,7 +63,7 @@ const SignIn: FunctionComponent<SignInProps> = () => {
             <label htmlFor="email">Email address</label>
           </div>
           {formik.touched.email && formik.errors.email ? (
-            <p className="text-danger">{formik.errors.email}</p>
+            <p style={{color:'white',fontWeight:"bold"}}>{formik.errors.email}</p>
           ) : null}
           <div className="mb-3 form-floating">
             <input
@@ -79,7 +79,7 @@ const SignIn: FunctionComponent<SignInProps> = () => {
             <label htmlFor="password">Password</label>
           </div>
           {formik.touched.password && formik.errors.password ? (
-            <p className="text-danger">{formik.errors.password}</p>
+            <p style={{color:'white',fontWeight:"bold"}}>{formik.errors.password}</p>
           ) : null}
           <div>
             <button

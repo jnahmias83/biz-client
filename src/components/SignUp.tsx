@@ -65,7 +65,7 @@ const SignUp: FunctionComponent<SignUpProps> = () => {
             <label htmlFor="name">Name</label>
           </div>
           {formik.touched.name && formik.errors.name ? (
-            <p className="text-danger">{formik.errors.name}</p>
+            <p style={{color:'white',fontWeight:"bold"}}>{formik.errors.name}</p>
           ) : null}
           <div className="mb-3 form-floating">
             <input
@@ -81,7 +81,7 @@ const SignUp: FunctionComponent<SignUpProps> = () => {
             <label htmlFor="email">Email address</label>
           </div>
           {formik.touched.email && formik.errors.email ? (
-            <p className="text-danger">{formik.errors.email}</p>
+            <p style={{color:'white',fontWeight:"bold"}}>{formik.errors.email}</p>
           ) : null}
           <div className="mb-3 form-floating">
             <input
@@ -97,7 +97,7 @@ const SignUp: FunctionComponent<SignUpProps> = () => {
             <label htmlFor="password">Password</label>
           </div>
           {formik.touched.password && formik.errors.password ? (
-            <p className="text-danger">{formik.errors.password}</p>
+            <p style={{color:'white',fontWeight:"bold"}}>{formik.errors.password}</p>
           ) : null}
           <div className=" form-check form-switch">
             <input
@@ -114,7 +114,7 @@ const SignUp: FunctionComponent<SignUpProps> = () => {
             </label>
           </div>
           {formik.touched.biz && formik.errors.biz ? (
-            <p className="text-danger">{formik.errors.biz}</p>
+            <p style={{color:'white',fontWeight:"bold"}}>{formik.errors.biz}</p>
           ) : null}
           <div>
             <button

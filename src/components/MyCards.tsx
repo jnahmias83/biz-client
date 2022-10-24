@@ -33,7 +33,7 @@ const MyCards: FunctionComponent<MyCardsProps> = () => {
       <Navbar isLogged={getIsLogged()} isAdmin={getIsAdmin()} />
       <h1 className="display-5 text-center my-3" style={{color:"black"}}>My Cards</h1>
       <div className="row gap-4 m-4">
-        {(myCards.length != 0) ? (
+        {(myCards.length) ? (
           myCards.map((card: Card) => (
             <div
               key={card._id}
