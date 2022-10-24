@@ -27,7 +27,7 @@ const NewCard: FunctionComponent<NewCardProps> = () => {
       phone: yup.string().required(),
       image: yup.string().required()
     }),
-    onSubmit: (values: Card) => {
+    onSubmit: (values: Card,{resetForm}) => {
       addCard(values)
         .then((result) => {
           successMsg("The card added successfully");
@@ -35,6 +35,7 @@ const NewCard: FunctionComponent<NewCardProps> = () => {
         })
         .catch((err) => {
           errorMsg(err.response.data);
+          resetForm();
         });
     },
   });

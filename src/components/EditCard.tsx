@@ -18,7 +18,6 @@ const EditCard: FunctionComponent<EditCardProps> = () => {
     getCard(id as string).then((result) => {
       setCard(result.data);
     }).catch((err)=>{
-        console.log(err);
         errorMsg(err.message.data);
     });
   }, []);
@@ -40,17 +39,16 @@ const EditCard: FunctionComponent<EditCardProps> = () => {
         phone: yup.string().required(),
         image: yup.string().required()
     }),
-    onSubmit: (values) => {
+    onSubmit: (values,{resetForm}) => {
         let card: Card = { ...values, _id: id as string };
         editCard(card)
           .then((result) => {
-            console.log(result.data);
             successMsg("Card was edited successfully!");
             navigate("/myCards");
           })
-          .catch((error) => {
-            console.log(error);
-            errorMsg("Oops...something went wrong..");
+          .catch((err) => {
+            errorMsg(err.response.data);
+            resetForm();
           });
       },
   });
@@ -151,8 +149,6 @@ const EditCard: FunctionComponent<EditCardProps> = () => {
       </form>
     </>
   );
-
-  return <></>;
 };
 
 export default EditCard;

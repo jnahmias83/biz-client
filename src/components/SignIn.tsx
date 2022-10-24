@@ -20,7 +20,7 @@ const SignIn: FunctionComponent<SignInProps> = () => {
         .required()
         .min(8, "Too short! Should be a least 8 characters"),
     }),
-    onSubmit: (values: User) => {
+    onSubmit: (values: User,{resetForm}) => {
       findUser(values)
         .then((result) => {
           sessionStorage.setItem("Islogged", "true");
@@ -30,6 +30,7 @@ const SignIn: FunctionComponent<SignInProps> = () => {
         })
         .catch((err) => {
           errorMsg(err.response.data);
+          resetForm();
         });
     },
   });

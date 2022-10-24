@@ -22,7 +22,7 @@ const SignUp: FunctionComponent<SignUpProps> = () => {
         .min(8, "Too short! Should be a least 8 characters"),
       biz: yup.boolean().required(),
     }),
-    onSubmit: (values: User) => {
+    onSubmit: (values: User,{resetForm}) => {
       addUser(values)
         .then((result) => {
           sessionStorage.setItem("Islogged", "true");
@@ -32,6 +32,7 @@ const SignUp: FunctionComponent<SignUpProps> = () => {
         })
         .catch((err) => {
           errorMsg(err.response.data);
+          resetForm();
         });
     },
   });
